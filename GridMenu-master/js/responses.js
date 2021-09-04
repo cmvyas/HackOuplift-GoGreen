@@ -1,7 +1,8 @@
 function getBotResponse(input) {
-  if (input == "hi") {
-    return "hello, am Sri, please do tell me whether you are a farmer or a buyer ";
+  if (input == "yes") {
+    return " Are you a farmer or a buyer ? ";
   } else if (input == "farmer") {
+    return "okay";
   } else if (input == "login" || input == "register") {
     return "Its quite simple, just go the home tab and on the right corner on the navigation bar choose login / sign up option, then continue with the instructions given.";
   } else if (input == "account") {
@@ -21,7 +22,7 @@ function getBotResponse(input) {
   } else if (input == "I want to talk with customer care unit of GoGreen") {
     return "Please send your query to pumssrinivas@gmail.com or contact the number: +91 7735813593.";
   } else if (input == "thank you") {
-    return "Most welcome, and Sri is always here to hekp you. Also please share your feedback in our feedback section, this small contibution of yours will be helpful for everyone.";
+    return "Most welcome, and Sri is always here to help you. Also please share your feedback in our feedback section, this small contibution of yours will be helpful for everyone.";
   } else if (input == "How good is the service") {
     return "Please go to the feedback section, this will inform you how good our services are.";
   } else {
