@@ -12,19 +12,21 @@
         background-size: contain;
         background-position: right;
       }
+
       .MO {
         height: 420px;
         width: 500px;
-        justify-content: left;
+        justify-content: right;
         margin: auto;
-        margin-top: 40px;
+        margin-top: 0px;
       }
       .content {
-        color: #12c4af;
+
+        color: #003b33;
         width: 700px;
         max-height: 400px;
         background: rgb(214, 40, 40);
-        margin-top: 10px;
+        margin-top: 0px;
         background: none;
         display: grid;
         text-align: left;
@@ -83,7 +85,7 @@
       }
 
       .search-box {
-        height: 500px;
+        height: 200px;
         width: 80%;
         margin: auto;
         align-items: center;
@@ -95,25 +97,33 @@
       }
 
       .search {
+        font-family: "Playfair Display", serif;
         border-radius: 0px;
         height: 40px;
-        width: 80%;
+        width: 60%;
         text-align: left;
-        padding-left: 15px;
+        padding-left: 10px;
         font-size: 19px;
         outline: none;
         padding-right: 10px;
-        background-color: wheat;
+        background-color: rgb(10, 7, 0);
         border: none;
+        color: aliceblue;
+        margin-left: 10%;
+        opacity: 0.8;
+        
       }
       .main {
         height: 700px;
-        width: 100%;
-        display: grid;
-        grid-template-columns: 15% 65% 20%;
+        width: 50%;
+       
+        
       }
       .m {
         background: none;
+      }
+      .fa{
+          font-size: 60px;
       }
       #c1 {
       }
@@ -121,98 +131,149 @@
         display: none;
       }
       .p1 {
-        background-image: url("img2.jpg");
+        background-image: url("./img/img2.jpg");
         background-size: cover;
       }
       .p2 {
-        background-image: url("img12.jpg");
+        background-image: url("./img/img12.jpg");
         background-size: cover;
       }
       .p3 {
-        background-image: url("img4.jpg");
+        background-image: url("./img/img4.jpg");
         background-size: cover;
       }
       .p4 {
-        background-image: url("img5.jpg");
+        background-image: url("./img/img5.jpg");
         background-size: cover;
       }
       .p5 {
-        background-image: url("img1.jpg");
+        background-image: url("./img/img1.jpg");
         background-size: cover;
       }
       .p6 {
-        background-image: url("img8.jpg");
+        background-image: url("./img/img8.jpg");
         background-size: cover;
       }
       .p7 {
-        background-image: url("img9.jpg");
+        background-image: url("./img/img9.jpg");
         background-size: cover;
       }
       .p8 {
-        background-image: url("img10.jpg");
+        background-image: url("./img/img10.jpg");
         background-size: cover;
       }
       .p9 {
-        background-image: url("img11.jpg");
+        background-image: url("./img/img11.jpg");
         background-size: cover;
       }
       .p10 {
-        background-image: url("img3.jpg");
+        background-image: url("./img/img3.jpg");
         background-size: cover;
       }
       .p11 {
-        background-image: url("img7.jpg");
+        background-image: url("./img/img7.jpg");
         background-size: cover;
       }
       .Q {
-        display: grid;
-        grid-template-columns: 20% 70% 10%;
+        font-family: "Playfair Display", serif;
+          padding-top: 40px;
+        margin-top: 300px;
+        margin-left: -700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 50%;
+        /* grid-template-columns: 20% 70% 10%; */
       }
-      #ques {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        margin-left: 180px;
-      }
+      /* #ques {
+        grid-column-start: 0;
+        grid-column-end: 6;
+        margin-left: 0px;
+       
+        
+      } */
       button {
-        background: none;
+        background:#618500;
         outline: none;
-        border: 2px solid rgb(44, 114, 44);
-        width: 90px;
-        height: 30px;
-        margin: 10px;
+        border: 2px solid rgb(0, 58, 0);
+        width: 100px;
+        height: 40px;
+        margin: 20px;
         justify-content: center;
         font-size: 15px;
         border-radius: 15px;
+        color: white;
+        font-size: large;
+        cursor: pointer;
+        opacity: 0.9;
       }
       .Q ic {
         font-size: 34px;
         margin-top: 15px;
         color: rgb(102, 167, 102);
       }
+.mai{
+   
+}
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top:0px;
+        height: 200px;
+       
+      }
+      .arrow{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center; 
+       
+       
+      }
+      .dis{
+          margin-top:200px;
+          margin-left:-50%;
+      }
+      h3{
+        font-family: "Playfair Display", serif;
+        font-size: xx-large;
+        margin-bottom: 50px;
+      }
     </style>
   </head>
   <body>
-    <div class="main">
+    <div class="mai">
       <div class="m">
-        <img
-          style="width: 100%; height: auto; position: relative"
-          src="./img/mellon.gif"
-        />
+       
+        
       </div>
-      <div class="m">
-        <h2>Hey, Welcome to Eco-Bot, Let’s save the nature TOGHTER</h2>
-        <div class="search-box">
-          <input
-            id="inputt"
-            class="search"
-            type="text"
-            value="1. Hey choose the category of your plant"
-            readonly
-          />
-        </div>
-        <div class="Q">
-          <div id="ques"></div>
-        </div>
+     <div class="main">
+
+         <div class="m">
+           <h3>Welcome to <b  style="color: #618500; font-size: 2.2rem;"> ECO-BOT</b>, Let’s save the nature <b style="color: #618500; font-size: 2.2rem;"">TOGETHER</b></h3>
+           <div class="arrow">
+               
+                   <ic class="fa fa-arrow-circle-left" style="color: #618500;" onclick="back()"></ic
+               
+               <div class="search-box">
+                 <input
+                   id="inputt"
+                   class="search"
+                   type="text"
+                   value="1. Hey choose the category of your plant"
+                   readonly
+                 />
+               </div>
+           </div>
+   
+           <div class="Q">
+             <div id="ques"></div>
+           </div>
+     </div>
+<div class="dis">
+
+    <div class="MO" id="MOU"></div>
+</div>
       </div>
     </div>
     <div class="foot"></div>
@@ -423,26 +484,26 @@
 
       <!--chat bot kinda-->
       <div id="flowers">
-        <ic class="fa fa-arrow-circle-left" onclick="back()"></ic
-        ><button onclick="rose()">Rose</button
+        <button onclick="rose()">Rose</button
         ><button onclick="hibiscus()">Hibiscus</button
         ><button onclick="marigold()">Marigold</button>
+        <button onclick="rose()">Rose</button
+            ><button onclick="hibiscus()">Hibiscus</button
+            ><button onclick="marigold()">Marigold</button>
+     
       </div>
       <div id="fruits">
-        <ic class="fa fa-arrow-circle-left" onclick="back()"></ic
-        ><button onclick="apple()">Apple</button
+       <button onclick="apple()">Apple</button
         ><button onclick="orange()">Orange</button
         ><button onclick="mango()">Mango</button>
       </div>
       <div id="veg">
-        <ic class="fa fa-arrow-circle-left" onclick="back()"></ic
-        ><button onclick="spinach()">Spinach</button
+       <button onclick="spinach()">Spinach</button
         ><button onclick="peas()">Peas</button
         ><button onclick="potato()">Potato</button>
       </div>
       <div id="questions">
-        <ic class="fa fa-arrow-circle-left" onclick="back()"></ic>
-        <button onclick="flower()">Flower</button
+                <button onclick="flower()">Flower</button
         ><button onclick="fruit()">Fruit</button
         ><button onclick="veg()">Vegetable</button>
       </div>
@@ -459,18 +520,18 @@
       function flower() {
         document.getElementById("ques").innerHTML =
           document.getElementById("flowers").innerHTML;
-        document.getElementById("inputt").value = "Please select a flower...";
+        document.getElementById("inputt").value = "Choose Your Flower ";
       }
       function fruit() {
         document.getElementById("ques").innerHTML =
           document.getElementById("fruits").innerHTML;
-        document.getElementById("inputt").value = "Please select a fruit...";
+        document.getElementById("inputt").value = "Choose Your Fruit ";
       }
       function veg() {
         document.getElementById("ques").innerHTML =
           document.getElementById("veg").innerHTML;
         document.getElementById("inputt").value =
-          "Please select a vegetable...";
+          "Choose Your Vegetable ";
       }
       function rose() {
         document.getElementById("MOU").innerHTML =
@@ -520,7 +581,7 @@
       function back() {
         document.getElementById("ques").innerHTML =
           document.getElementById("questions").innerHTML;
-        document.getElementById("inputt").value = "Please select an option...";
+        document.getElementById("inputt").value = "Choose Your Option";
       }
     </script>
   </body>
