@@ -43,6 +43,7 @@
 
 .menu-trigger {
   display: none;
+  margin-left: 0 !important;
 }
 
 .grim {
@@ -448,12 +449,13 @@
   position: relative;
   right: 0;
   width: 100%;
-  min-height: 80vh;
+  min-height: 100vh;
   padding: 20px 20px 40px 20px;
   background: #f4fff4fa;
   transition: 0.5s;
   z-index: 2;
   top: 0px;
+  bottom: 20px;
 }
 .chat {
   margin-top: 60px;
