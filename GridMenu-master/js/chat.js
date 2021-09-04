@@ -35,7 +35,7 @@ function getTime() {
 // Gets the first message
 function firstBotMessage() {
   let firstMessage =
-    "Hii, I am smarty, I am very smart like my developer 🙈..I mean, little lesser than her 🤭,and you are?";
+    "Welcome, we are so happy that you showed intrest in our aim, i am here to guide you, You need some help ? ";
   document.getElementById("botStarterMessage").innerHTML =
     '<p class="botText"><span>' + firstMessage + "</span></p>";
 
@@ -61,7 +61,7 @@ function getResponse() {
   let userText = $("#textInput").val();
 
   if (userText == "") {
-    userText = "I love Code Palace!";
+    userText = "......";
   }
 
   let userHtml = '<p class="userText"><span>' + userText + "</span></p>";
