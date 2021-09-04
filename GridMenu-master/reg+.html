@@ -215,12 +215,15 @@ justify-items: center;
           <span style="justify-content: center;text-align: center;margin-left: 280px;font-size: 25px; "> CONNECT</span><br><br>
             <div class="c1">
             
-            <span style="display: flex;"><i style="margin-top: 17px;" class="fa fa-user icon"></i><input class="input-b" type="text" placeholder="Enter your Name"></span></div> 
+            <span style="display: flex;"><i style="margin-top: 17px;" class="fa fa-user icon"></i>
+                
+                <input class="input-b" type="text" placeholder="Enter your Name" id='namebox'></span></div> 
             
             <div class="c2">
 
             
-            <span style="display: flex;"> <i class="fa fa-circle"  style="margin-top:17px;font-size: 24px;" aria-hidden="true"></i>     <input class="input-b" type="number" placeholder="Enter Age"></span></div>
+            <span style="display: flex;"> <i class="fa fa-circle"  style="margin-top:17px;font-size: 24px;" aria-hidden="true"></i>    
+                 <input  id='namebox' class="input-b" type="number" placeholder="Enter Age"></span></div>
             <div class="c3">
             
             <span style="display: flex;"> <i class="fa fa-pagelines" style="font-size: 24px;margin-top:17px;" aria-hidden="true"></i>
@@ -243,10 +246,12 @@ justify-items: center;
             </select></span></div>
             <div class="c4">
            
-            <span style="display: flex;"><i class="fa fa-inr" style="font-size:24px;margin-top: 17px" aria-hidden="true"></i><input class="input-b" type="number" placeholder="Enter price / kg"></span></div>
+            <span style="display: flex;"><i class="fa fa-inr" style="font-size:24px;margin-top: 17px" aria-hidden="true"></i>
+                <input id='pricebox' class="input-b" type="number" placeholder="Enter price / kg"></span></div>
             <div class="c5">
            
-            <span style="display:flex;margin-top: 20px;"><input name ="gender" type="radio"> &nbsp;<i class="fa fa-male"  aria-hidden="true">  Male    </i> &nbsp;<input type="radio"  name="gender">&nbsp;<i class="fa fa-female"  aria-hidden="true">  Female  </i>  </span>  </div>
+            <span style="display:flex;margin-top: 20px;">
+                <input id='pricebox' name ="gender" type="radio"> &nbsp;<i class="fa fa-male"  aria-hidden="true">  Male    </i> &nbsp;<input type="radio"  name="gender">&nbsp;<i class="fa fa-female"  aria-hidden="true">  Female  </i>  </span>  </div>
             <div class="c6">
             
             <span style="display: flex;"> <i class="fa fa-location-arrow" style="font-size:24px;margin-top: 20px;" aria-hidden="true"></i>
@@ -283,25 +288,81 @@ justify-items: center;
             </select></span></div>
             <div class="c7">    
                 <span style="display:flex">    
-                    <i class="fa fa-map-marker" style="font-size: 24px;margin-top:15px" aria-hidden="true"></i><input type="text" class="input-b" placeholder="Enter your city"></div>
+                    <i class="fa fa-map-marker" style="font-size: 24px;margin-top:15px" aria-hidden="true"></i>
+                    <input id='citybox' type="text" class="input-b" placeholder="Enter your city"></div>
             <div class="c8"></span>
                 <span style="display:flex">
                 <i class="fa fa-map-pin" style="margin-top:19px" aria-hidden="true"></i>
-            <input type="text" class="input-b" placeholder="Enter your pincode"></span></div>
+            <input id='pinbox' type="text" class="input-b" placeholder="Enter your pincode"></span></div>
             <div class="c9">
             
              <span style="display:flex">  <i class="fa fa-phone" style="margin-top:17px;" aria-hidden="true"></i>
-            <input class="input-b" type="text"placeholder="Enter your number"></span> </div>
-            <div class="c10">
-                <span style="display:flex;"><i class="fa fa-key" style="margin-top:17px" aria-hidden="true"></i>
-            <input class="input-b" type="text" placeholder="Enter OTP"></span></div>
-            <div class="c11">
-            <button width=250px style="background-color: aliceblue;outline:none;border:1px solid #8FD974;border-radius: 4px;;">SUBMIT</button>
+            <input id='numberbox' class="input-b" type="text"placeholder="Enter your number"></span> </div>
+         <div class="c11">
+            <button id="insert" width=250px style="background-color: aliceblue;outline:none;border:1px solid #8FD974;border-radius: 4px;;">SUBMIT</button>
         </div>
         </div>
         </form>
            
     </div>
 </div>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/9.0.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.01/firebase-database.js"></script> 
+<script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-auth.js"></script>
+
+<script id="backend">
+  var firebaseConfig = {
+    apiKey: "AIzaSyCnyB6tkXdU2-eqwAHik_LEvv55G4Q5UlE",
+    authDomain: "gogreen-43532.firebaseapp.com",
+    databaseURL: "https://gogreen-43532-default-rtdb.firebaseio.com",
+    projectId: "gogreen-43532",
+    storageBucket: "gogreen-43532.appspot.com",
+    messagingSenderId: "424917581904",
+    appId: "1:424917581904:web:b8095788f827516e80d155"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(config);</script>
+
+  var databse=firebase.database();
+var name,age,gender,crop,price,state,city,pin,number;
+
+function Ready(){
+    name=document.getElementById('namebox').value;
+    age=document.getElementById('agebox').value;
+    gender=document.getElementById('genderbox').value;
+    crop=document.getElementById('state').value;
+    price=document.getElementById('pricebox').value;
+    state=document.getElementById('state').value;
+    city=document.getElementById('citybox').value;
+    pin=document.getElementById('pinbox').value;
+    number=document.getElementById('numberbox').value;
+}
+
+document.getElementById('insert').onclick=function(){
+    Ready();
+    databse.ref('farmer/'+name).set({
+        NameOfFarmer:name,
+        Age:age,
+        Gender:gender,
+        Crop:crop,
+        Price:price,
+        State:state,
+        City:city,
+        Pin:pin,
+        Number:number,
+
+    });
+}
+
+</script>
+
+
+
+
     </body>
 </html>

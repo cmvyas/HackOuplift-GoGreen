@@ -369,8 +369,13 @@
         </div>
         <div class="slide">
             <p><span style="font-size:40px;text-align:center;margin-top:40px;font-family:Merienda">Thank You !!</span>
-            <button  class="buttonfb" width=100px>Submit</button>
-        </div></div>
+            <img src="hand.png"></p>
+            <button  id="submitbutton" class="buttonfb" width=100px>   Submit</button>
+        </div>
+        <div class="slide">
+            <p ><span style="font-size:30px;text-align:center;"><br>Thank You For Your Response <br><span style="font-size:15px" >Feedback Submitted Successfully!!</span></span>
+            </p>
+            </div></div>
         <div class="circles">
             <span id="b1" class="focus"></span>
             <span id="b2"></span>
@@ -393,7 +398,7 @@
         var b3=document.getElementById("b3");
         var b4=document.getElementById("b4");
         var b5=document.getElementById("b5");
-            
+		var b6=document.getElementById("submitbutton");
         b1.onclick =function(){
             slide.style.transform="translateX(0px)";
             b1.classList.add("focus");
@@ -435,6 +440,21 @@
             b4.classList.remove("focus");
             b5.classList.add("focus");
         }
+		b6.onclick =function(){
+            slide.style.transform="translateX(-4500px)";
+            b1.classList.remove("focus");
+            b2.classList.remove("focus");
+            b3.classList.remove("focus");
+            b4.classList.remove("focus");
+            b5.classList.remove("focus");
+            b1.style.display="none";
+            b2.style.display="none";
+            b3.style.display="none";
+            b4.style.display="none";
+            b5.style.display="none";
+            b6.classList.add("focus");
+
+        }
 
         </script>
 
@@ -448,6 +468,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="js/responses.js"></script>
 <script src="js/chat.js"></script> 
+
+
 
 
 	</body>
